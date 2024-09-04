@@ -1,5 +1,5 @@
 # Sobre o Saga
-A ideia inicial do Saga é a unificação de dois sistemas já utilizados pelo PPCIC do CEFET.
+A ideia inicial do Saga é a unificação de dois sistemas já utilizados pelo PPCIC do CEFET: O **Gerdisc** e o **Pondoc**. O Gerdisc é um sistema de informação desenvolvido para gerenciar o cadastro e as informações dos alunos matriculados no programa de Mestrado em Ciência da Computação do CEFET/RJ. O Pondoc tem por objetivo a entrega das pontuações qualis dos docentes e dicentes do EIC CEFET-RJ
 
 ## Requisitos
 - Docker: Versão > 20.10.0
@@ -7,3 +7,9 @@ A ideia inicial do Saga é a unificação de dois sistemas já utilizados pelo P
 - Python: Versão > 3.10.0
 - Docker Compose: Versão > 1.27.0
 - MongoDB: Versão > 7.0
+
+## Primeiros passos
+- Clonar repositório
+  - Abra um terminal ou prompt de comando e execute o código abaixo:
+  - `git clone https://github.com/ribeiroisaac/saga.git`
+  - Verifique a criação dos arquivos "docker-compose.yaml" nas pastas "gerdisc" e "pondoc".
