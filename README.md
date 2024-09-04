@@ -13,3 +13,4 @@ A ideia inicial do Saga é a unificação de dois sistemas já utilizados pelo P
   - Abra um terminal ou prompt de comando e execute o código abaixo:
   - `git clone https://github.com/ribeiroisaac/saga.git`
   - Verifique a criação dos arquivos "docker-compose.yaml" nas pastas "gerdisc" e "pondoc".
+- Verificar nas pastas deste Github, a inicialização do [Gerdisc](https://github.com/ribeiroisaac/saga/tree/main/gerdisc) e do [Pondoc](https://github.com/ribeiroisaac/saga/tree/main/pondoc), conforme seu desejo.
