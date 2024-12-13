@@ -8,6 +8,7 @@ namespace saga.Controllers
 {
     [ApiController]
     [Route("students")]
+    [AllowAnonymous]
     public class StudentsController : ControllerBase
     {
         private readonly IStudentService _studentService;

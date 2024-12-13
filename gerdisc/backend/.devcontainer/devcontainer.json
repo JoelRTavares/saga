@@ -6,7 +6,7 @@
     "service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"mounts": [
-		"source=~/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+		"source=/mnt/c/Users/Joel/.ssh,target=/root/.ssh,type=bind,consistency=cached"
 	  ],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
