@@ -61,7 +61,14 @@ export default function UserForm({ type = undefined, isUpdate = false }) {
         institution: '',
         projectId: '',
     });
-
+    const formatDateForInput = (dateString) => {
+        if (!dateString) return '';
+        const date = new Date(dateString);
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa do zero
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
     useEffect(() => {
         var projectsId = undefined;
         if (isUpdate) {
@@ -317,16 +324,16 @@ export default function UserForm({ type = undefined, isUpdate = false }) {
                                         />
                                     </div>
                                     <div className="formInput">
-                                        <label htmlFor="registrationDate">Data de Matrícula</label>
-                                        <input required={true} disabled={isUpdate} type="date" name="registrationDate" id="registrationDate" value={student.registrationDate} onChange={(e) => changeStudentAttribute(e.target.name, e.target.value)} />
+                                        <label htmlFor="registrationDate">Data da Matrícula</label>
+                                        <input required={true} disabled={isUpdate} type="date" name="registrationDate" id="registrationDate" value={formatDateForInput(student.registrationDate)} onChange={(e) => changeStudentAttribute(e.target.name, e.target.value)} />
                                     </div>
                                     <div className="formInput">
                                         <label htmlFor="entryDate">Data de Entrada</label>
-                                        <input required={true} disabled={isUpdate} type="date" name="entryDate" id="entryDate" value={student.entryDate} onChange={(e) => changeStudentAttribute(e.target.name, e.target.value)} />
+                                        <input required={true} disabled={isUpdate} type="date" name="entryDate" id="entryDate" value={formatDateForInput(student.entryDate)} onChange={(e) => changeStudentAttribute(e.target.name, e.target.value)} />
                                     </div>
                                     <div className="formInput">
                                         <label htmlFor="dateOfBirth">Data de Nascimento</label>
-                                        <input required={true} disabled={isUpdate} type="date" name="dateOfBirth" id="dateOfBirth" value={student.dateOfBirth} onChange={(e) => changeStudentAttribute(e.target.name, e.target.value)} />
+                                        <input required={true} disabled={isUpdate} type="date" name="dateOfBirth" id="dateOfBirth" value={formatDateForInput(student.dateOfBirth)} onChange={(e) => changeStudentAttribute(e.target.name, e.target.value)} />
                                     </div>
                                     <div className="form-section" id="qualification-section2">
                                         <div className="formInput">
