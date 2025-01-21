@@ -91,6 +91,14 @@ export default function Home() {
                         <label htmlFor='entities' className={"iconLabel"}>Carregar CSV</label>
                     </div>
                 }
+                {
+                    (role === "Administrator") && <div className='boardItem' onClick={() => navigate('/researchLine')}>
+                        <div id='entities'>
+                            <img className={"filtered"} src={process.env.PUBLIC_URL +"/report.png"} />
+                        </div>
+                        <label htmlFor='entities' className={"iconLabel"}>Linha de Pesquisa</label>
+                    </div>
+                }
             </div>
             </div>
         </PageContainer>

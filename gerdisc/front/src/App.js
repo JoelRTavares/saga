@@ -8,6 +8,10 @@ import UserForm from './pages/user/createUser';
 import StudentList from './pages/student/StudentList';
 import ProfessorList from './pages/professor/professorList';
 import ResearcherList from './pages/researcher/researcherList';
+
+import ResearchLineList from './pages/researchLine/researchLineList';
+import CreateResearchLine from './pages/researchLine/createResearchLine';
+
 import ProjectList from './pages/projects/projectList';
 import ProjectForm from './pages/projects/createProject';
 import ExtensionList from './pages/extension/extensionList';
@@ -31,6 +35,11 @@ export default function App() {
         <Route path="/students/:id/edit" element={<StudentUpdate/>} />
         <Route path="/students" element={<StudentList />} />
         <Route path="/professors" element={<ProfessorList />} />
+
+        <Route path="/researchLine" element={<ResearchLineList />} />
+        <Route path="/researchLine/add" element={<CreateResearchLine />} />
+        <Route path="/researchLine/:id" element={<CreateResearchLine Update={true}/>} />
+
         <Route path="/researchers" element={<ResearcherList />} />
         <Route path="/researches" element={<ResearchList />} />
         <Route path="/extensions" element={<ExtensionList />} />

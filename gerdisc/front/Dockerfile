@@ -2,7 +2,7 @@
 FROM node:20
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
@@ -13,8 +13,5 @@ RUN npm install
 # Copy the rest of the application's code
 COPY . .
 
-# Build the React app
-RUN npm run build
-
 # Specify the command to run when the container starts
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
