@@ -99,6 +99,14 @@ export default function Home() {
                         <label htmlFor='entities' className={"iconLabel"}>Linha de Pesquisa</label>
                     </div>
                 }
+                 {
+                    (role === "Administrator") && <div className='boardItem' onClick={() => navigate('/pondoc')}>
+                        <div id='entities'>
+                            <img className={"filtered"} src={process.env.PUBLIC_URL +"/pandoc.png"} />
+                        </div>
+                        <label htmlFor='entities' className={"iconLabel"}>Pondoc</label>
+                    </div>
+                }
             </div>
             </div>
         </PageContainer>
