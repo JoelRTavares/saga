@@ -54,17 +54,12 @@ export default function ResearchLineForm({ Update = false }) {
 
   const handleUpdate = () => {
     putResearchLinesById(id, { name })
-      .then((response) => {
-        if (response.status === 200) {
-          navigate("/researchLines");
-        } else {
-          setError(`Erro: ${response.statusText}`);
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        setError(error.message || "Erro desconhecido");
-      });
+    .then(() => navigate(-1))
+    .catch((error) => {
+      getResearchLineById(id)
+      .then((resLine) => name == resLine.name ? navigate(-1) : setError(error))
+      .catch((error) => setError(error))
+    })
   };
 
   const handleSave = (e) => {
