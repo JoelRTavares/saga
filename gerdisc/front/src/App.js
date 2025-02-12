@@ -55,6 +55,7 @@ export default function App() {
         <Route path="/projects/add" element={<ProjectForm />} />
         <Route path="/projects/:id" element={<ProjectForm Update={true} />} />
         <Route path="/students/:id/extensions/add" element={<ExtensionForm />} />
+
       </Routes>
     </Router>
   );

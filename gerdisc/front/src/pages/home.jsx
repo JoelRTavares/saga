@@ -100,7 +100,7 @@ export default function Home() {
                     </div>
                 }
                  {
-                    (role === "Administrator") && <div className='boardItem' onClick={() => navigate('/pondoc')}>
+                    (role === "Administrator") && <div className='boardItem' onClick={() => {window.location.href = 'http://localhost:3000/'}}>
                         <div id='entities'>
                             <img className={"filtered"} src={process.env.PUBLIC_URL +"/pandoc.png"} />
                         </div>
